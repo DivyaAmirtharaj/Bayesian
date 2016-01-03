@@ -1,0 +1,2 @@
+include 'BayesianOutbreak', ':library'
+include 'library'

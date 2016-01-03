@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="custom_profile_image">50dp</dimen>
+    <dimen name="custom_profile_padding">2dp</dimen>
+    <dimen name="radio_button">54dp</dimen>
+    <dimen name="symptoms_fonts">32dp</dimen>
+</resources>

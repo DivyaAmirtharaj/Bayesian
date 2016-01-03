@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left">
+
+    </LinearLayout>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+        <TableRow>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/image1"
+                android:src="@drawable/smiley" />
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textSize="26dp"
+                android:text="  Symptoms"
+                android:id="@+id/symptoms_title"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="When Started"
+                android:id="@+id/Date_title"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fever1"
+                    android:text="  "
+                    android:onClick="onFeverRadioButtonClicked"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fever2"
+                    android:text="  "
+                    android:onClick="onFeverRadioButtonClicked"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fever3"
+                    android:text="  "
+                    android:onClick="onFeverRadioButtonClicked"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fever4"
+                    android:text="  "
+                    android:onClick="onFeverRadioButtonClicked"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fever5"
+                    android:textSize="20dp"
+                    android:text=""
+                    android:onClick="onFeverRadioButtonClicked"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:text="     Fever"
+                android:id="@+id/fever_txt" />
+
+            <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:id="@+id/fever_dt"
+                style="@style/HideText"/>
+
+            <TextView
+                android:layout_width="34dp"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:text=" "
+                android:id="@+id/fever_txt1" />
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/headache1"
+                    android:text="  "
+                    android:onClick="onHeadacheRadioButtonClicked"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/headache2"
+                    android:text="  "
+                    android:onClick="onHeadacheRadioButtonClicked"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/headache3"
+                    android:text="  "
+                    android:onClick="onHeadacheRadioButtonClicked"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/headache4"
+                    android:text="  "
+                    android:onClick="onHeadacheRadioButtonClicked"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/headache5"
+                    android:layout_gravity="center_horizontal"
+                    android:text=""
+                    android:onClick="onHeadacheRadioButtonClicked"
+                    android:textSize="20dp"
+                    android:checked="false" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:text="     Headache"
+                android:id="@+id/headache_label" />
+            <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:id="@+id/headache_dt"
+                style="@style/HideText"/>
+
+        </TableRow>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clickable="false">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fatigue1"
+                    android:text="  "
+                    android:checked="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fatigue2"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fatigue3"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fatigue4"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fatigue5"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="20dp"
+                    android:text=""
+                    android:checked="false" />
+            </RadioGroup>
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:text="     Fatigue"
+                android:id="@+id/fatigue_label" />
+            <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:id="@+id/fatigue_dt"
+                style="@style/HideText"/>
+        </TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clickable="false">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nausea1"
+                    android:text="  "
+                    android:checked="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nausea2"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nausea3"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nausea4"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nausea5"
+                    android:layout_gravity="center_horizontal"
+                    android:text="" />
+            </RadioGroup>
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:text="     Nausea"
+                android:id="@+id/nausea_label" />
+            <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:id="@+id/nausea_dt"
+                style="@style/HideText"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clickable="false">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/diarrhea1"
+                    android:text="  "
+                    android:checked="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/diarrhea2"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/diarrhea3"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/diarrhea4"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/diarrhea5"
+                    android:layout_gravity="center_horizontal"
+                    android:text=""
+                    android:checked="false" />
+            </RadioGroup>
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:text="     Diarrhea"
+                android:id="@+id/diarrhea_label" />
+            <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:id="@+id/diarrhea_dt"
+                style="@style/HideText"/>
+
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clickable="false">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vomit1"
+                    android:text="  "
+                    android:checked="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vomit2"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vomit3"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vomit4"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vomit5"
+                    android:layout_gravity="center_horizontal"
+                    android:text=""
+                    android:checked="false" />
+            </RadioGroup>
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:text="     Vomiting"
+                android:id="@+id/vomit_label" />
+            <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:id="@+id/Vomit_dt"
+                style="@style/HideText"/>
+
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clickable="false">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cough1"
+                    android:text="  "
+                    android:checked="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cough2"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cough3"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cough4"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cough5"
+                    android:layout_gravity="center_horizontal"
+                    android:text=""
+                    android:checked="false" />
+            </RadioGroup>
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:text="     Cough"
+                android:id="@+id/cough_label" />
+            <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:id="@+id/cough_dt"
+                style="@style/HideText"/>
+
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clickable="false">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sorethroat1"
+                    android:text="  "
+                    android:checked="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sorethroat2"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sorethroat3"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sorethroat4"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sorethroat5"
+                    android:layout_gravity="center_horizontal"
+                    android:text=""
+                    android:checked="false" />
+            </RadioGroup>
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:text="     Sore Throat"
+                android:id="@+id/sorethroat_label" />
+            <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:id="@+id/sorethroat_dt"
+                style="@style/HideText"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clickable="false">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chill1"
+                    android:text="  "
+                    android:checked="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chill2"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chill3"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chill4"
+                    android:text="  "
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chill5"
+                    android:layout_gravity="center_horizontal"
+                    android:text=""
+                    android:checked="false" />
+            </RadioGroup>
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:text="     Chills"
+                android:id="@+id/chill_label" />
+            <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:id="@+id/chill5_dt"
+                style="@style/HideText"/>
+            />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

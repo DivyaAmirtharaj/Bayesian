@@ -1,0 +1,33 @@
+Applications Memory Usage (kB):
+Uptime: 58752 Realtime: 58735
+
+** MEMINFO in pid 1347 [com.google.maps.android.utils.demo] **
+                         Shared  Private     Heap     Heap     Heap
+                   Pss    Dirty    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------
+       Native       24        8       24     5764     5369      266
+       Dalvik     9634     9288     9332    13444    10297     3147
+       Cursor        0        0        0                           
+       Ashmem        0        4        0                           
+    Other dev    28385     1184     5952                           
+     .so mmap     2240     5144      888                           
+    .jar mmap        0        0        0                           
+    .apk mmap      626        0        0                           
+    .ttf mmap       27        0        0                           
+    .dex mmap     1529        0       24                           
+   Other mmap     3643       44      144                           
+      Unknown     3700      452     3688                           
+        TOTAL    49808    16124    20052    19208    15666     3413
+ 
+ Objects
+               Views:       82         ViewRootImpl:        3
+         AppContexts:        4           Activities:        2
+              Assets:        4        AssetManagers:        4
+       Local Binders:       15        Proxy Binders:       23
+    Death Recipients:        1
+     OpenSSL Sockets:        2
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
