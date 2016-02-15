@@ -42,6 +42,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         addDemo("Symptoms", SymptomsActivity.class);
 //        addDemo("Heatmaps", HeatmapsDemoActivity.class);
         addDemo("GeoJSON Layer", GeoJsonDemoActivity.class);
+
+
     }
 
     private void addDemo(String demoName, Class<? extends Activity> activityClass) {
