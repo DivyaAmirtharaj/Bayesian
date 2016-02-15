@@ -27,6 +27,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 
 public abstract class BaseLocalMapActivity extends FragmentActivity {
     private GoogleMap mMap;
+
     private Location mLoc;
 
     protected int getLayoutId() {

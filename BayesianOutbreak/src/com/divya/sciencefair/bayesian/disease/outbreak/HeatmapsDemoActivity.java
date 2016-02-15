@@ -53,6 +53,7 @@ public class HeatmapsDemoActivity extends BaseDemoActivity {
 
     /**
      * Alternative radius for convolution
+     *
      */
     private static final int ALT_HEATMAP_RADIUS = 10;
 
